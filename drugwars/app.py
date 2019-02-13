@@ -30,7 +30,7 @@ def dw_attack(enemy, unit, amount, account):
     pprint.pprint(tb.broadcast())
 
 
-if __name__ == '__main__':
+def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--enemy', help='Enemy name')
     parser.add_argument('--unit', help='Unit name')
@@ -44,3 +44,7 @@ if __name__ == '__main__':
         Steem(nodes=["https://rpc.usesteem.com"],
             keys=[args.steem_key])
         dw_attack(args.enemy, args.unit, args.amount, args.account)
+
+
+if __name__ == '__main__':
+    main()
